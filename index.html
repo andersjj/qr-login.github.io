@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-48880899-9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-48880899-9');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Electron-Hero</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/carousel/">
+    <link rel='icon' href='favicon.ico' type='image/x-icon' />
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href="default.css" rel="stylesheet">
+    <style>
+        .featurette-heading {
+            margin-top: 10px !important;
+        }
+
+        .modal-dialog {
+            max-width: 90%;
+        }
+
+        .carousel-indicators,
+        .carousel-control-next-icon,
+        .carousel-control-prev-icon {
+            display: none;
+        }
+    </style>
+
+    <style>
+        .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.3/examples/carousel/carousel.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="index.html"><img src="logo_clear_back.png" style="height:40px;padding-right:8px" />Electron-Hero</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="howItWorks.html">How It Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gettingStarted.html">Getting Started</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactUs.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <!-- <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li> -->
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+
+                    <div id="starfield" style="opacity:1.0;width:100%;height:50%;background-color:#333333;background-image:url(electron-hero-image.png);background-repeat:no-repeat;background-size:cover;background-position:center center">
+                        <center>
+                            <img class='hero-image' src='hero-console.png'>
+                        </center>
+                    </div>
+
+                </div>
+                <!-- <div class="carousel-item">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+                        <rect width="100%" height="100%" fill="#777" /></svg>
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Another example headline.</h1>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+                        <rect width="100%" height="100%" fill="#777" /></svg>
+                    <div class="container">
+                        <div class="carousel-caption text-right">
+                            <h1>One more for good measure.</h1>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+
+        <!-- Marketing messaging and featurettes
+  ================================================== -->
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+
+        <div class="container marketing">
+
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+
+                <div class="col-lg-4">
+                    <!--<img class="img-circle" data-src="holder.js/140x140/index.html" alt="Generic placeholder image">-->
+                    <h2>Experimental</h2>
+                    <p style="max-width:450px;margin-left:auto;margin-right:auto">
+
+                        We like to say Electron-Hero is an "experiment in efficiency". Everyone knows that Electron can be
+                        a bit of a resource hog. Thinking about it, if you have 10 electron based apps, there are probably many
+                        common elements between them all, but they are duplicated between each of the 10 apps.
+
+                    </p>
+
+                    <!--
+                <p><a class="btn btn-default" href="page1.html" role="button">Details &raquo;</a></p>
+                -->
+
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <!--<img class="img-circle" data-src="holder.js/140x140/index.html" alt="Generic placeholder image">-->
+                    <h2>What If...</h2>
+                    <p style="max-width:450px;margin-left:auto;margin-right:auto">
+
+                        there was a way to have an Electron "run-time engine" that could download and run other electron "apps" without
+                        having to download and run all the resources needed for each "app" redundantly. It would save resources by leveraging common node modules
+                        across each app.
+
+
+                    </p>
+                    <!--
+              <p><a class="btn btn-default" href="page2.html" role="button">Details &raquo;</a></p>
+                -->
+
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <!--<img class="img-circle" data-src="holder.js/140x140/index.html" alt="Generic placeholder image">-->
+                    <h2>This is it</h2>
+                    <p style="max-width:450px;margin-left:auto;margin-right:auto">
+
+                        Electron-Hero is the response to that thought. It's a runtime engine that can download Electron source code and run
+                        it on the fly. The Electron-Hero runtime will have the most popular
+                        node modules pre-installed. Then each Electron-Hero app would only need to install the node modules not included.
+                    </p>
+                    <!--
+              <p><a class="btn btn-default" href="page3.html" role="button">Details &raquo;</a></p>
+            -->
+
+                </div><!-- /.col-lg-4 -->
+
+
+            </div><!-- /.row -->
+
+
+            <!-- START THE FEATURETTES -->
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-6" style="margin-top:20px">
+                    <h2 class="featurette-heading">Start your engine</h2>
+                    <p class="lead">
+                        If Electron-Hero is the engine, then the next question is what can it run? To answer that question,
+                        we built some Electron-Hero "apps".  The first one is a very simple app that is just a two paned
+                        window with the ability to host other UI elements.  But it did prove it was possible to download
+                        code on the fly and run it within an existing electron "instance".
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <img class="pop bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src='starter.png' alt="Atom-Hero">
+
+                    <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+                    </svg> -->
+                </div>
+            </div>
+
+
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-6 order-md-2" style="margin-top:30px">
+                    <h2 class="featurette-heading">To-Do Hero</h2>
+                    <p class="lead">
+                        These days seems like to-do lists are a big deal. Well, we put it on our list to make an Electron-Hero todo list and
+                        we did it in under 2 days. So, with this app you can locally store as many lists as you need to get things done.  This used
+                        the same UI as in the starter app, but takes it to the next level with file access, and more robust UI styling.
+                    </p>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <img class="pop bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="border-radius:10px" src="todo-hero.png" alt="Slack-Hero">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-6">
+                    <h2 class="featurette-heading">Atom Hero</h2>
+                    <p class="lead">
+                        With Atom-Hero, we have a working duplicate of one of our favorite text editors, which is also built on Electron.
+                        Using Code-Mirror, we were able to come up
+                        with a functional text editor in just a few days. We didn't really find a tree-view that we liked, so
+                        we were able to include that in those few days. And we made it in a way that makes it easy to build into
+                        other Electron-Hero Apps.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <img class="pop bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src='atom-hero.png' alt="Atom-Hero">
+
+                    <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+                    </svg> -->
+                </div>
+            </div>
+
+            <!-- /END THE FEATURETTES -->
+
+        </div><!-- /.container -->
+
+
+        <!-- FOOTER -->
+        <footer class="container">
+            <p class="float-right"><a href="#">Back to top</a></p>
+            <!-- <p>&copy; 2017-2019 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p> -->
+        </footer>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')
+    </script>
+    <script src="https://getbootstrap.com/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+	<script src="default.js"></script>
+
+    <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <img src="" class="imagepreview" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+
+
+</html>

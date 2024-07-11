@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-48880899-9"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-48880899-9');
+        </script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Jekyll v3.8.5">
+        <title>Electron-Hero
+        </title>
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/carousel/">
+        <link rel='icon' href='favicon.ico' type='image/x-icon' />
+        <!-- Bootstrap core CSS -->
+        <link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="default.css" rel="stylesheet">
+
+        <style>
+            .featurette-heading {
+                margin-top: 10px !important;
+            }
+            .modal-dialog {
+                max-width: 90%;
+            }
+            .carousel-indicators,
+            .carousel-control-next-icon,
+            .carousel-control-prev-icon {
+                display: none;
+            }
+        </style>
+        <style>
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                    font-size: 3.5rem;
+                }
+            }
+        </style>
+        <!-- Custom styles for this template -->
+        <link href="https://getbootstrap.com/docs/4.3/examples/carousel/carousel.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="index.html">
+                    <img src="logo_clear_back.png" style="height:40px;padding-right:8px" />Electron-Hero
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="howItWorks">How It Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gettingStarted.html">Getting Started</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactUs.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+        </header>
+        <main role="main">
+            <!-- Marketing messaging and featurettes
+================================================== -->
+            <!-- Wrap the rest of the page in another container to center all the content. -->
+            <div class="container marketing">
+                <!-- Three columns of text below the carousel -->
+                <div class="row">
+                </div>
+                <!-- /.row -->
+                <!-- START THE FEATURETTES -->
+                <div class="spacer-top">
+                </div>
+
+
+                <div class="row featurette">
+                    <div class="col-md-1">
+                    </div>
+                    <!-- <div class="col-md-10">
+                        <h2 class="featurette-heading">How it Works
+                        </h2>
+                        <p class="lead">
+                            Electron makes it easy to create a native Mac app in Javascript.  This happens at the expense of overheard for the smallest
+                            app to the largest app.  If you're making a small 'Hello World' app, this overhead seems like a lot.  If you're making
+                            something more sophisticated, it's not so much.
+                        </p>
+                    </div> -->
+                    <div class="col-md-1">
+                    </div>
+                </div>
+
+                <div class="row featurette">
+                    <div class="col-md-6">
+                        <h2 class="featurette-heading">Overhead</h2>
+                        <p class="lead">
+                            Every Electron app has a certain amount of overhead.  Generally speaking, Electron apps have at least 3 overhead processes, plus
+                            one "Renderer" process that's one window for the app.  This means that any Electron app you use will incur these overhead
+                            processes plus a "Renderer" process for each window that your Electron app opens up.
+                        </p>
+
+                    </div>
+                    <div class="col-md-6">
+                        <img class="pop bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="margin-top:40px" src='overhead.png' alt="Atom-Hero">
+                        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+                        </svg> -->
+                    </div>
+                </div>
+
+                <hr class="featurette-divider">
+
+                <div class="row featurette">
+                    <div class="col-md-7">
+                        <img class="pop bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="position:relative;top:-20px" src='shared_overhead.png' alt="Atom-Hero">
+                        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+                        </svg> -->
+                    </div>
+                    <div class="col-md-5">
+                        <p class="lead" style="margin-top:30px">
+                            This overhead isn't so bad if you have a large app.  But if you want to have a lot of smaller apps, then the overhead will
+                            start to take it's toll.  That's where Electron-Hero can help.  Multiple smaller apps can all share the overhead of a single
+                            Electron app via the Electron-Hero console, which makes the overall drain on resources much smaller.  This makes it more feasible
+                            to have a lot of small, useful Electron apps running without the fan kicking in on your laptop.
+                        </p>
+
+                    </div>
+                </div>
+
+                <hr class="featurette-divider">
+
+                <div class="row featurette">
+                    <div class="col-md-5">
+                        <p class="lead" style="margin-top:30px">
+                            To run an Electron-Hero app, just start the console, put a git url for the app, click Install and click Run.
+                            The code is downloaded from the git url, and installed into your Documents folder and run dynamically.  This gives
+                            you the ability to view the source code.  Many times even "open source" projects are so complex and have such a cumbersome bulid process, it's hard to
+                            make changes.  Using Electron-Hero, make modifications and just Ctrl+R to restart the app with your code changes.
+                            No re-compiles, no re-builds, no kidding.
+                        </p>
+
+                    </div>
+                    <div class="col-md-7">
+                        <img class="pop bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="position:relative;top:-20px" src='accessible_source_code.png' alt="Atom-Hero">
+                        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+                        </svg> -->
+                    </div>
+                </div>
+
+                <hr class="featurette-divider">
+
+                <div class="row featurette">
+                    <div class="col-md-6">
+                        <img class="pop bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="position:relative;top:0px" src='code_share_repeat.png' >
+                        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+                        </svg> -->
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="featurette-heading">Code, Share, Repeat</h2>
+                        <p class="lead" style="margin-top:30px">
+                            Another big benefit of Electron-Hero is being able to share you apps in a very "production-ready" way.  The Electron-Hero console
+                            is notarized by Apple, so you won't get any annoying "are you sure you want to run this?" prompts.  You have access to some of the cooler
+                            things in Mac (TouchBar, TouchId, etc.) without having to worry about doing builds, etc.  Most Electron open source projects involve
+                            jumping through hoops and doing builds just to get it running on your system, forget about sending it to someone else to run easily.
+                            With Electron-Hero, it's as easy as download console, install app, run.  And we're working on ways to make that even easier.
+                        </p>
+
+                    </div>
+                </div>
+
+                <hr class="featurette-divider">
+
+                <div class="row featurette">
+                    <div class="col-md-7">
+                        <h2 class="featurette-heading">Electon Fiddle copy?</h2>
+
+                        <p class="lead" style="margin-top:30px">
+                            Although this seems very similar to "Electron-Fiddle" there are some key differences.  The main one is that with Electron Fiddle you need
+                            to package each of your projects as a seperate Electron app, incurring all the duplicated overhead that Electron-Hero was designed to
+                            get rid of.  But the good news is that you can still use Electron-Fiddle if you like to get your app up and running, and then post it as a
+                            Electron-Hero app and it could be the best of both worlds.
+                        </p>
+
+                    </div>
+                    <div class="col-md-5">
+                        <img class="pop bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="margin-top:30px;"  src='fiddle.png' >
+                        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+                        </svg> -->
+                    </div>
+                </div>
+
+
+                <!-- /END THE FEATURETTES -->
+            </div>
+            <!-- /.container -->
+            <!-- FOOTER -->
+            <footer class="container">
+                <!-- <p class="float-right"><a href="#">Back to top</a></p> -->
+                <!-- <p>&copy; 2017-2019 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p> -->
+            </footer>
+        </main>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script>
+            window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')
+        </script>
+        <script src="https://getbootstrap.com/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous">
+        </script>
+		<script src="default.js"></script>
+
+        <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;
+                            </span>
+                            <span class="sr-only">Close
+                            </span>
+                        </button>
+                        <img src="" class="imagepreview" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

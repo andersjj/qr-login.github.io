@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="fav_icon.png?ver=2">
+
+    <title>Electron-Hero.com</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="default.css" rel="stylesheet">
+    <link rel='icon' href='favicon.ico' type='image/x-icon'/>
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-48880899-9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-48880899-9');
+    </script>
+</head>
+<!-- NAVBAR
+================================================== -->
+
+<body style="max-width:1200px;margin-right:auto;margin-left:auto">;
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="max-width:1200px;margin-left:auto;margin-right:auto;">
+        <div class="container">
+            <div>
+
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" style="position:relative;top:-10px;left:-10px" href="index.html"><img src="logo_clear_back.png" style="height:40px;padding-right:8px" />Electron-Hero</a>
+
+            </div>
+
+
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <!--<li class="active"><a href="#">Home</a></li>-->
+                    <!--<li><a href="about.html">About</a></li>-->
+                    <!--<li><a href="contact.html">Contact</a></li>-->
+                </ul>
+
+                <span class="visible-lg" style="float:left;width:30%">&nbsp;</span>
+                <span class="visible-md" style="float:left;width:17%">&nbsp;</span>
+                <span class="visible-sm" style="float:left;width:15%">&nbsp;</span>
+
+
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <!-- Carousel
+    ================================================== -->
+
+    <div style="height:30px;background-color:#aaa;border-bottom:1px solid #555"></div>
+
+    <div id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators" style="display:none">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <!--
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        -->
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+
+
+                <div id="starfield" style="opacity:1.0;width:100%;height:50%;background-color:#333333;background-image:url(electron-hero-image.png);background-repeat:no-repeat;background-size:cover;background-position:center center">
+                    <center>
+                        <img class='hero-image' src='hero-console.png'>
+                    </center>
+                </div>
+
+                <div class="container">
+
+                    <!--
+            <img class='visible-lg visible-md' src='phone_2.png' style='position:absolute;top:5%;width:400px;left:7%;margin-left:7%;margin-right:9%'>
+                 -->
+
+                    <div class="carousel-caption" style="width:80%;left:10%;top:0px;height:100%">
+
+
+                        <!--
+              <p style='margin-top:50px;text-align:left;padding:20px;background-color:rgba(0,0,0,.6);border-radius:10px;padding-top:15px;margin-bottom:10px;padding-bottom:15px;max-width:350px'>
+                  <span style='color:#888;text-shadow:none'>App-Pi shows you how you can<br> create apps with XML.<span></p>
+
+              <p style='margin-bottom:0px;text-align:left;padding:20px;background-color:rgba(0,0,0,.6);border-radius:10px;padding-top:15px;padding-bottom:15px;margin-bottom:10px;max-width:350px'>
+                  <span style='color:#888;text-shadow:none'>App-Pi shows you how you can<br> create apps with XML.<span></p>
+              <div style="height:40px"></div>
+
+              <p style='margin-bottom:0px;text-align:left;padding:20px;background-color:rgba(0,0,0,.6);border-radius:10px;padding-top:15px;padding-bottom:15px;margin-bottom:10px;max-width:350px'>
+                  <span style='color:#888;text-shadow:none'>App-Pi shows you how you can<br> create apps with XML.<span></p>
+              <div style="height:40px"></div>
+              -->
+
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <!--
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+      -->
+
+
+    </div><!-- /.carousel -->
+
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div class="col-lg-4">
+                <!--<img class="img-circle" data-src="holder.js/140x140/index.html" alt="Generic placeholder image">-->
+                <h2>Experimental</h2>
+                <p style="max-width:450px;margin-left:auto;margin-right:auto">
+
+                    We like to say Electron-Hero is an "experiment in efficiency". Everyone knows that Electron can be
+                    a bit of a resource hog. Thinking about it, if you have 10 electron based apps, there are probably many
+                    common elements between them all, but they are duplicated between each of the 10 apps.
+
+                </p>
+
+                <!--
+            <p><a class="btn btn-default" href="page1.html" role="button">Details &raquo;</a></p>
+            -->
+
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <!--<img class="img-circle" data-src="holder.js/140x140/index.html" alt="Generic placeholder image">-->
+                <h2>What If...</h2>
+                <p style="max-width:450px;margin-left:auto;margin-right:auto">
+
+                    there was a way to have an Electron "run-time engine" that could download and run other electron "apps" without
+                    having to download and run all the resources needed for each "app" redundantly. It would save resources by leveraging common node modules
+                    across each app.
+
+
+                </p>
+                <!--
+          <p><a class="btn btn-default" href="page2.html" role="button">Details &raquo;</a></p>
+            -->
+
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <!--<img class="img-circle" data-src="holder.js/140x140/index.html" alt="Generic placeholder image">-->
+                <h2>This is it</h2>
+                <p style="max-width:450px;margin-left:auto;margin-right:auto">
+
+                    Electron-Hero is the response to that thought. It's a runtime engine that can download Electron source code and run
+                    it on the fly. The Electron-Hero runtime will have the most popular
+                    node modules pre-installed. Then each Electron-Hero app would only need to install the node modules not included.
+                </p>
+                <!--
+          <p><a class="btn btn-default" href="page3.html" role="button">Details &raquo;</a></p>
+        -->
+
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-6">
+                <h2 class="featurette-heading" style="margin-top:30px">Atom-Hero</h2>
+                <p class="lead">
+
+                    If Electron-Hero is the engine, then the next question is what can it run? To answer that question,
+                    we built some Electron-Hero "apps". One of them is an Atom clone. Using Code-Mirror, we were able to come up
+                    with a functional text editor in just a few days. We didn't really find a tree-view that we liked, so
+                    we were able to include that in those few days. And we made it in a way that makes it easy to build into
+                    other Electron-Hero Apps.
+
+            </div>
+            <div class="col-md-6">
+                <img class="pop featurette-image img-responsive" style="border-radius:10px" src='atom-hero.png' alt="Atom-Hero">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-6">
+                <img class="pop featurette-image img-responsive" style="border-radius:10px" src="slack-hero.png" alt="Slack-Hero">
+            </div>
+            <div class="col-md-6">
+                <h2 class="featurette-heading" style="margin-top:10px">Slack-Hero</h2>
+                <p class="lead">
+                    Slack had me at hello. It was a great looking app with some cool functionality and lots of people I knew
+                    and worked with was using it. So how hard would it be to re-create as an Electron Hero App? Not super hard, from
+                    a UI point of view. We had it up and running in about 5 days and found a great back end service (restdb.io) and an
+                    authentication service (Auth0.com) to make the POC come together even faster.
+                </p>
+            </div>
+        </div>
+
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-6">
+                <h2 class="featurette-heading" style="margin-top:30px">ToDo-Hero</h2>
+                <p class="lead">
+                    These days seems like to-do lists are a big deal. Well, we put it on our list to make an Electron-Hero todo list and
+                    we did it in under 2 days. So, with this app you can locally store as many lists as you need to get things done.
+                </p>
+
+            </div>
+            <div class="col-md-6">
+                <img class="pop featurette-image img-responsive" style="border-radius:10px" src='todo-hero.png' alt="Todo-Hero">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <center>
+            Interested in learning more? <a href="mailto:hero@electron-hero.com" target="_blank">Reach out to us</a>
+        </center>
+
+
+
+
+
+
+
+
+        <!-- /END THE FEATURETTES -->
+
+        <!-- FOOTER -->
+        <div style="height:35px"></div>
+        <footer>
+            <p class="pull-right"><a href="#">Back to top</a></p>
+        </footer>
+    </div><!-- /.container -->
+    <div style="height:50px"></div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/docs.min.js"></script>
+
+
+    <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <img src="" class="imagepreview" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        $(function() {
+            $('.pop').on('click', function() {
+                $('.imagepreview').attr('src', $(this).attr('src'));
+                $('#imagemodal').modal('show');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
+
+<!-- Localized -->

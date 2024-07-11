@@ -1,0 +1,121 @@
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+.hero-image {
+    width: 400px;
+    margin-top: 20px;
+}
+
+.form-contact {
+    width: 600px;
+    margin: auto;
+}
+
+@media (min-width: 768px) {
+    .hero-image {
+        width: 600px;
+    }
+}
+
+@media (min-width: 992px) {
+    .hero-image {
+        width: 700px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero-image {
+        width: 850px;
+    }
+}
+
+.spacer-top {
+    margin-top: 40px;
+}
+
+.navbar-collapse {
+    margin-bottom: 3px;
+}
+
+/*
+.container.marketing {
+    background-color: white;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+}
+
+BODY {
+    background-color: #ddd;
+}
+
+.modal-dialog {
+    width: 90%;
+} */
+.featurette-heading {
+    margin-top: 0px;
+}
+
+.spacer-one {
+	float: left;
+    height: 10px;
+}
+
+.console-img {
+}
+
+.ghlogo {
+    height: 30px;
+}
+
+.app-title {
+    font-weight: bold;
+}
+
+.app-header {
+    margin-top: 20px;
+    border-top:1px solid #aaa;
+    float: left;
+    display:block;
+    width: 100%;
+}
+
+.app-header > span {
+    float: left;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: bold;
+    background-color: #ddd;
+    color: white;
+    position: relative;
+    top: -12px;
+
+}
+
+.ruler-img {
+    margin-top: 50px;
+}
+
+img.pop {
+/* 	border:1px solid red; */
+}
+
+span.code {
+    background-color: #f6f6f6;
+    color: #ce375c;
+    font-family: "menlo", courier, monospace;
+    font-size:13px;
+    border:1px solid #bdbdbd;
+    padding:2px;
+    border-radius: 5px;
+}
+
+span.light {
+    color: #ddd;
+}
