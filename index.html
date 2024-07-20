@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 
@@ -17,7 +18,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Electron-Hero</title>
+    <title>QR-Login</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/carousel/">
     <link rel='icon' href='favicon.ico' type='image/x-icon' />
@@ -66,7 +67,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <a class="navbar-brand" href="index.html"><img src="logo_clear_back.png" style="height:40px;padding-right:8px" />Electron-Hero</a>
+            <a class="navbar-brand" href="index.html"><img src="logo_clear_back.png" style="height:40px;margin-right:8px;border-radius:4pt" />  QR-Login</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -149,12 +150,11 @@
 
                 <div class="col-lg-4">
                     <!--<img class="img-circle" data-src="holder.js/140x140/index.html" alt="Generic placeholder image">-->
-                    <h2>Experimental</h2>
+                    <h2>No Passwords</h2>
                     <p style="max-width:450px;margin-left:auto;margin-right:auto">
 
-                        We like to say Electron-Hero is an "experiment in efficiency". Everyone knows that Electron can be
-                        a bit of a resource hog. Thinking about it, if you have 10 electron based apps, there are probably many
-                        common elements between them all, but they are duplicated between each of the 10 apps.
+                        Simply put, passwords are a thing of the past. We have the technology to authenticate other ways, and we should move towards that. It's easy to get content with passwords, but we forget how risky they can be. Now is the time to evolve how we authenticate to websites and other online systems.
+
 
                     </p>
 
@@ -165,12 +165,11 @@
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
                     <!--<img class="img-circle" data-src="holder.js/140x140/index.html" alt="Generic placeholder image">-->
-                    <h2>What If...</h2>
+                    <h2>Secure</h2>
                     <p style="max-width:450px;margin-left:auto;margin-right:auto">
 
-                        there was a way to have an Electron "run-time engine" that could download and run other electron "apps" without
-                        having to download and run all the resources needed for each "app" redundantly. It would save resources by leveraging common node modules
-                        across each app.
+                        Passwords are bad in that they are very static. Even encrypted/hashed passwords only change when the owner changes them. This gives hackers much more time to breach them. QR-Login's authentications are only valid for 30 seconds, making it much harder for hackers to breach it.
+
 
 
                     </p>
@@ -181,12 +180,11 @@
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
                     <!--<img class="img-circle" data-src="holder.js/140x140/index.html" alt="Generic placeholder image">-->
-                    <h2>This is it</h2>
+                    <h2>Transparent</h2>
                     <p style="max-width:450px;margin-left:auto;margin-right:auto">
 
-                        Electron-Hero is the response to that thought. It's a runtime engine that can download Electron source code and run
-                        it on the fly. The Electron-Hero runtime will have the most popular
-                        node modules pre-installed. Then each Electron-Hero app would only need to install the node modules not included.
+                        QR-Login is built on industry accepted standards and practices for digital signing, encryption where needed and secure authorization. This means that we are very open about how QR-Login works with digital keys without comprimising the security of transactions.
+
                     </p>
                     <!--
               <p><a class="btn btn-default" href="page3.html" role="button">Details &raquo;</a></p>
@@ -279,7 +277,7 @@
         window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')
     </script>
     <script src="https://getbootstrap.com/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
-	<script src="default.js"></script>
+    <script src="default.js"></script>
 
     <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
