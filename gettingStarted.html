@@ -15,15 +15,19 @@
         <meta name="description" content="">
         <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
         <meta name="generator" content="Jekyll v3.8.5">
-        <title>Electron-Hero
+        <title>QR-Login
         </title>
         <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/carousel/">
         <link rel='icon' href='favicon.ico' type='image/x-icon' />
         <!-- Bootstrap core CSS -->
         <link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link href="default.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
         <style>
+            #QRCode {
+                height:180pt;
+            }
             .demoDiv {
                 border:2px solid #ddd;
                 float:left;
@@ -120,7 +124,7 @@
 </div>
  --><br>
 Select Issuer to test with &nbsp; 
-<select>
+<select id="issuer">
     <option >QR-Login.io
     <option >Apple.com
     <option >Facebook.com
@@ -128,12 +132,12 @@ Select Issuer to test with &nbsp;
 <br><br>
 <div class="form-group">
     <!-- <label for="exampleInputEmail1">Username</label> -->
-    <input type="email" style="width:90%" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username">
+    <input type="email" id="userid" style="width:90%" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username">
     <small id="emailHelp" class="form-text text-muted"></small>
 </div>
 
-<button type="button" class="btn btn-primary">Register</button>
-<button type="button" class="btn btn-secondary">Authenticate</button>
+<button type="button" id="btnRegister" class="btn btn-primary">Register</button>
+<button type="button" id="btnLogin" class="btn btn-secondary">Authenticate</button>
 
 
 </center>
@@ -142,6 +146,10 @@ Select Issuer to test with &nbsp;
                     </div>
                     <div class="col-md-6">
                         <div class="demoDiv">
+                            <center>
+                                <img id="QRCode" />
+                                <div id="userInfo"></div>
+                            </center>
                         </div>
                     </div>
                 </div>
@@ -161,11 +169,10 @@ Select Issuer to test with &nbsp;
                 <!-- <p>&copy; 2017-2019 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p> -->
             </footer>
         </main>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
         </script>
-        <script>
+<!--         <script>
             window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')
-        </script>
+        </script> -->
         <script src="https://getbootstrap.com/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous">
         </script>
 		<script src="default.js"></script>
@@ -186,4 +193,110 @@ Select Issuer to test with &nbsp;
             </div>
         </div>
     </body>
+
+    <script>
+
+        
+        $( document ).ready(function() {
+
+            pollCount = 0;
+            var nonce = "";
+            var issuer = "";
+            var info;
+            var validated;
+
+            console.log('here in ready...')
+            $("#btnRegister").on('click', function(){
+
+                console.log( $('#userid').val() );
+                issuer = $('#issuer').val();
+                console.log(issuer);
+
+                var jqxhr = $.ajax( "https://www.widget-list.com/otp-ui/register_user.php?userid=" + $('#userid').val() +"&issuer=" + issuer)
+                  .done(function(data) {
+                    QR = JSON.parse(data).QR;
+                    message = JSON.parse(data).message;
+                    if (QR > "") {
+                        $('#QRCode').attr('src',QR);
+                    }
+                    if (message > "") {
+                        alert(message);
+                    }
+                  })
+                  .fail(function(data) {
+                    alert( "error" );
+                    alert(error);
+                  })
+                  .always(function() {
+                    console.log( "complete" );
+                  });
+            })
+
+            $("#btnLogin").on('click', function(){
+
+                nonce = "";
+                issuer = $('#issuer').val();
+
+                var jqxhr = $.ajax( "https://www.widget-list.com/otp-ui/login_user.php?userid=" + $('#userid').val() + "&issuer=" + issuer)
+                  .done(function(data) {
+                    QR = JSON.parse(data).QR;
+                    message = JSON.parse(data).message;
+                    nonce = JSON.parse(data).nonce;
+                    if (QR > "") {
+                        $('#QRCode').attr('src',QR);
+                        // now we need to start polling to see if a OTP code is uploaded
+                        // in the next 30-60 seconds
+                        startPollingForUserCode();
+                    }
+                    if (message > "") {
+                        //alert(message);
+                    }
+                  })
+                  .fail(function(data) {
+                    alert( "error" );
+                    alert(error);
+                  })
+                  .always(function() {
+                    console.log( "complete" );
+                  });
+
+            })
+
+            function startPollingForUserCode() {
+                console.log(nonce);
+                var url = "https://www.widget-list.com/otp-ui/check_for_user_auth.php?userid=" + $('#userid').val() + "&issuer=" + issuer;
+                //if (nonce > "") {
+                    url += "&nonce=" + nonce;
+                //}
+                $.get( url, function( data ) {
+                    console.log(data);
+                    info = JSON.parse(data);
+                    validated = info.validated 
+                    $('#statusText').val( validated );
+                    if (validated) {
+                        //document.location.href = "logged_in.php"
+                        console.log('user validated');
+                        console.log ( info )
+                        $('#QRCode').attr('src',"");
+                        $('#userInfo').html(info.userid + "<br>" + info.issuer)
+                    }
+
+                });
+                pollCount += 1;
+                if (pollCount < 10) {
+                    if (!validated) {
+                        console.log('validated ===');
+                        console.log(info);
+                        setTimeout(startPollingForUserCode,5000)
+                    }
+                } else {
+                    document.location.href = "gettingStarted.html"
+                }
+            }
+
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+
+
 </html>
