@@ -234,10 +234,10 @@ Select Issuer to test with &nbsp;
 
             $("#btnLogin").on('click', function(){
 
-                nonce = "";
+                nonce = "1234567890abc";
                 issuer = $('#issuer').val();
 
-                var jqxhr = $.ajax( "https://www.widget-list.com/otp-ui/login_user.php?userid=" + $('#userid').val() + "&issuer=" + issuer)
+                var jqxhr = $.ajax( "https://www.widget-list.com/otp-ui/login_user.php?userid=" + $('#userid').val() + "&issuer=" + issuer + "&nonce=" + nonce)
                   .done(function(data) {
                     QR = JSON.parse(data).QR;
                     message = JSON.parse(data).message;
@@ -273,7 +273,7 @@ Select Issuer to test with &nbsp;
                     info = JSON.parse(data);
                     validated = info.validated 
                     $('#statusText').val( validated );
-                    if (validated) {
+                    if (validated === true) {
                         //document.location.href = "logged_in.php"
                         console.log('user validated');
                         console.log ( info )
