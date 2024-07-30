@@ -212,7 +212,7 @@ Select Issuer to test with &nbsp;
                 issuer = $('#issuer').val();
                 console.log(issuer);
 
-                var jqxhr = $.ajax( "http://18.208.49.125/qr-login/pr_register.php?userid=" + $('#userid').val() +"&issuer=" + issuer)
+                var jqxhr = $.ajax( "https://www.qr-login.com/pr_register.php?userid=" + $('#userid').val() +"&issuer=" + issuer)
                   .done(function(data) {
                     QR = JSON.parse(data).QR;
                     message = JSON.parse(data).message;
@@ -238,7 +238,7 @@ Select Issuer to test with &nbsp;
                 nonce = "1234567890abc";
                 issuer = $('#issuer').val();
 
-                var jqxhr = $.ajax( "http://18.208.49.125/qr-login/pr_login_user.php?userid=" + $('#userid').val() + "&issuer=" + issuer + "&nonce=" + nonce)
+                var jqxhr = $.ajax( "https://www.qr-login.com/pr_login_user.php?userid=" + $('#userid').val() + "&issuer=" + issuer + "&nonce=" + nonce)
                   .done(function(data) {
                     QR = JSON.parse(data).QR;
                     message = JSON.parse(data).message;
@@ -265,7 +265,7 @@ Select Issuer to test with &nbsp;
 
             function startPollingForUserCode() {
                 console.log(nonce);
-                var url = "http://18.208.49.125/qr-login/pr_check_user_auth.php?userid=" + $('#userid').val() + "&issuer=" + issuer;
+                var url = "https://www.qr-login.com/pr_check_user_auth.php?userid=" + $('#userid').val() + "&issuer=" + issuer;
                 //if (nonce > "") {
                     url += "&nonce=" + nonce;
                 //}
