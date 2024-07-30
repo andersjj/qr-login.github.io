@@ -1,6 +1,6 @@
 <?php
 
-	//echo $_SERVER['QUERY_STRING'];
+header("Access-Control-Allow-Origin: *");
 
 $url = "https://www.widget-list.com/otp-ui/login_user.php?".$_SERVER['QUERY_STRING'];
 $ch = curl_init();
