@@ -235,7 +235,8 @@ Select Issuer to test with &nbsp;
 
             $("#btnLogin").on('click', function(){
 
-                nonce = "1234567890abc";
+                //nonce = "1234567890abc";
+                nonce = new Date().valueOf();
                 issuer = $('#issuer').val();
 
                 var jqxhr = $.ajax( "https://www.qr-login.com/pr_login_user.php?userid=" + $('#userid').val() + "&issuer=" + issuer + "&nonce=" + nonce)
