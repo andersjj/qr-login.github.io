@@ -31,6 +31,10 @@
         .featurette-heading {
             margin-top: 10px !important;
         }
+        .featurette-divider {
+            margin-top: 30pt;
+            margin-bottom: 30pt !important;
+        }
 
         .modal-dialog {
             max-width: 90%;
@@ -178,22 +182,40 @@
 
             <hr class="featurette-divider">
 
-<!--             <div class="row featurette">
-                <div class="col-md-6" style="margin-top:20px">
-                    <h2 class="featurette-heading">Start your engine</h2>
+            <div class="row featurette">
+                <div class="col-md-7" style="margin-top:20px">
+                    <h2 class="featurette-heading">Secure</h2>
                     <p class="lead">
-                        If Electron-Hero is the engine, then the next question is what can it run? To answer that question,
-                        we built some Electron-Hero "apps".  The first one is a very simple app that is just a two paned
-                        window with the ability to host other UI elements.  But it did prove it was possible to download
-                        code on the fly and run it within an existing electron "instance".
+                        QR-Login uses industry accepted private/public key functionality at it's core to provide
+                        more secure authorization than just passwords.  It also incorporates a rotating TOTP code 
+                        and a random nonce to ensure that replay attacks won't happen.  All this security doesn't
+                        hurt the user experience either.  All of these security elements can be regenerated at
+                        will with a single tap, further enhancing security.
                     </p>
                 </div>
-                <div class="col-md-6">
-                    <img class="pop bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src='starter.png' alt="Atom-Hero">
+                <div class="col-md-5">
+                    <img class="pop bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="border:1px solid red !important" src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+L+U4T8ABu8CpCYJ1DQAAAAASUVORK5CYII=' >
                 </div>
-            </div> -->
+            </div>
 
+            <hr class="featurette-divider">
 
+            <div class="row featurette">
+                <div class="col-md-5">
+                    <img class="pop bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="border:1px solid red !important" src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+L+U4T8ABu8CpCYJ1DQAAAAASUVORK5CYII=' >
+                </div>
+                <div class="col-md-7" style="margin-top:20px">
+                    <h2 class="featurette-heading">Easy to use</h2>
+                    <p class="lead">
+                        With all this security, you'd think that QR-Login would be cumbersome to use, and nothing
+                        could be farther from the truth.  You can setup a QR-Login account on any website that
+                        supports it with a few taps, and login with one single tap.  All the work is done
+                        behind the scenes by the app.  In a situation like at a hotel, trying to login to a 
+                        streaming service, you can use QR-Login to authenticate with a single scan.  Much better
+                        than trying to type in your username and password on an on-screen keyboard and remote.
+                    </p>
+                </div>
+            </div>
 
 
 

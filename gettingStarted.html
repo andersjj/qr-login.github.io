@@ -237,6 +237,7 @@ Select Issuer to test with &nbsp;
 
                 //nonce = "1234567890abc";
                 nonce = new Date().valueOf();
+                $('#userInfo').html("");
                 issuer = $('#issuer').val();
 
                 var jqxhr = $.ajax( "https://www.qr-login.com/pr_login_user.php?userid=" + $('#userid').val() + "&issuer=" + issuer + "&nonce=" + nonce)
@@ -281,19 +282,22 @@ Select Issuer to test with &nbsp;
                         console.log ( info )
                         $('#QRCode').attr('src',"");
                         $('#userInfo').html(info.userid + "<br>" + info.issuer)
+                    } else {
+                        pollCount += 1;
+                        if (pollCount < 10) {
+                            if (!validated) {
+                                console.log('validated ===');
+                                console.log(info);
+                                setTimeout(startPollingForUserCode,5000)
+                            }
+                        } else {
+                            document.location.href = "gettingStarted.html"
+                        }                        
                     }
 
                 });
-                pollCount += 1;
-                if (pollCount < 10) {
-                    if (!validated) {
-                        console.log('validated ===');
-                        console.log(info);
-                        setTimeout(startPollingForUserCode,5000)
-                    }
-                } else {
-                    document.location.href = "gettingStarted.html"
-                }
+                
+
             }
 
         });
