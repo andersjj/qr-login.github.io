@@ -281,7 +281,8 @@ Select Issuer to test with &nbsp;
                         console.log('user validated');
                         console.log ( info )
                         $('#QRCode').attr('src',"");
-                        $('#userInfo').html(info.userid + "<br>" + info.issuer)
+                        $('#userInfo').html(info.userid + "<br>" + info.issuer + "<br>" + info.username + "<br>" + info.userphone + "<br>" + info.userguid )
+                    
                     } else {
                         pollCount += 1;
                         if (pollCount < 10) {
